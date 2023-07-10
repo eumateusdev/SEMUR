@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./src/assets/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./src/css/style.css">
     <title>SEMUR - 2023</title>
 </head>
 
@@ -16,7 +16,7 @@
 
     <nav class="navbar fixed-top shadow navbar-expand-lg bg-primary navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#" name="INICIO"><h1 class="m-0"><img class="d-block" src="./assets/logo.png" alt="Logo SEMUR 2023" ></h1></a>
+            <a id="inicio" class="navbar-brand" href="#" name="INICIO"><h1 class="m-0"><img class="d-block" src="./src/assets/logo.png" alt="Logo SEMUR 2023" ></h1></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -52,19 +52,19 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="img-fluid d-md-none" src="./assets/mobile/banner1-mobile.png" alt="Feliz 222 anos!">
-                <img class="img-fluid d-none d-md-block d-xl-none" src="./assets/tablet/banner1-tablet.png" alt="Feliz 222 anos!">
-                <img class="img-fluid d-none d-xl-block" src="./assets/desktop/banner1-desktop.png" alt="Feliz 222 anos!">
+                <img class="img-fluid d-md-none" src="./src/assets/mobile/banner1-mobile.png" alt="Feliz 222 anos!">
+                <img class="img-fluid d-none d-md-block d-xl-none" src="./src/assets/tablet/banner1-tablet.png" alt="Feliz 222 anos!">
+                <img class="img-fluid d-none d-xl-block" src="./src/assets/desktop/banner1-desktop.png" alt="Feliz 222 anos!">
             </div>
             <div class="carousel-item">
-                <img class="img-fluid d-md-none" src="./assets/mobile/banner2-mobile.png" alt="Atrações!">
-                <img class="img-fluid d-none d-md-block d-xl-none" src="./assets/tablet/banner2-tablet.png" alt="Atrações!">
-                <img class="img-fluid d-none d-xl-block" src="./assets/desktop/banner2-desktop.png" alt="Atrações!">
+                <img class="img-fluid d-md-none" src="./src/assets/mobile/banner2-mobile.png" alt="Atrações!">
+                <img class="img-fluid d-none d-md-block d-xl-none" src="./src/assets/tablet/banner2-tablet.png" alt="Atrações!">
+                <img class="img-fluid d-none d-xl-block" src="./src/assets/desktop/banner2-desktop.png" alt="Atrações!">
             </div>
             <div class="carousel-item">
-                <img class="img-fluid d-md-none" src="./assets/mobile/banner3-mobile.png" alt="Quem será a Miss Russas 2023?">
-                <img class="img-fluid d-none d-md-block d-xl-none" src="./assets/tablet/banner3-tablet.png" alt="Quem será a Miss Russas 2023?">
-                <img class="img-fluid d-none d-xl-block" src="./assets/desktop/banner3-desktop.png" alt="Quem será a Miss Russas 2023?">
+                <img class="img-fluid d-md-none" src="./src/assets/mobile/banner3-mobile.png" alt="Quem será a Miss Russas 2023?">
+                <img class="img-fluid d-none d-md-block d-xl-none" src="./src/assets/tablet/banner3-tablet.png" alt="Quem será a Miss Russas 2023?">
+                <img class="img-fluid d-none d-xl-block" src="./src/assets/desktop/banner3-desktop.png" alt="Quem será a Miss Russas 2023?">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
@@ -105,147 +105,14 @@
         <h5 class="container mt-2 mb-2">Atrações confirmadas</h5>
         <p class="container mb-4">Apresentando os shows confirmados: uma seleção de entretenimento imperdível!</p>
 
-        <div class="container row mx-auto g-4">
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <img class="img-fluid" src="./assets/gerais/thalia.jpg" alt="Thalia Santos">
-                    <div class="card-header">
-                        <h5 class="text-center">Thalia Santos</h5>
-                        <p class="m-0 p-0"><i class="bi bi-geo-alt-fill text-secondary me-2"></i>Local: Palco oficial da SEMUR</p>
-                        <p class="m-0 p-0"><i class="bi bi-clock text-secondary me-2"></i>Horário: 21:00</p>
-                        <p class="p-0"><i class="bi bi-calendar3 text-secondary me-2"></i>Data: 30/07/2023</p>
-                    </div> 
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <img class="img-fluid" src="./assets/gerais/sthephania.jpg" alt="Sthephania Gomes">
-                    <div class="card-header">
-                        <h5 class="text-center">Sthephania Gomes</h5>
-                        <p class="m-0 p-0"><i class="bi bi-geo-alt-fill text-secondary me-2"></i>Local: Palco oficial da SEMUR</p>
-                        <p class="m-0 p-0"><i class="bi bi-clock text-secondary me-2"></i>Horário: 23:00</p>
-                        <p class="p-0"><i class="bi bi-calendar3 text-secondary me-2"></i>Data: 30/07/2023</p>
-                    </div> 
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <img class="img-fluid" src="./assets/gerais/matheus.jpg" alt="Pastor Matheus Aguiar">
-                    <div class="card-header">
-                        <h5 class="text-center">Pastor Matheus Aguiar</h5>
-                        <p class="m-0 p-0"><i class="bi bi-geo-alt-fill text-secondary me-2"></i>Local: Palco oficial da SEMUR</p>
-                        <p class="m-0 p-0"><i class="bi bi-clock text-secondary me-2"></i>Horário: 20:00</p>
-                        <p class="p-0"><i class="bi bi-calendar3 text-secondary me-2"></i>Data: 05/08/2023</p>
-                    </div> 
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <img class="img-fluid" src="./assets/gerais/calcinhapreta.jpg" alt="Banda Calcinha Preta">
-                    <div class="card-header">
-                        <h5 class="text-center">Calcinha Preta</h5>
-                        <p class="m-0 p-0"><i class="bi bi-geo-alt-fill text-secondary me-2"></i>Local: Palco oficial da SEMUR</p>
-                        <p class="m-0 p-0"><i class="bi bi-clock text-secondary me-2"></i>Horário: 23:00</p>
-                        <p class="p-0"><i class="bi bi-calendar3 text-secondary me-2"></i>Data: 05/08/2023</p>
-                    </div> 
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <img class="img-fluid" src="./assets/gerais/alana gomes.jpg" alt="Celebradora Alana Gomes">
-                    <div class="card-header">
-                        <h5 class="text-center">Celebradora Alana Gomes</h5>
-                        <p class="m-0 p-0"><i class="bi bi-geo-alt-fill text-secondary me-2"></i>Local: Palco oficial da SEMUR</p>
-                        <p class="m-0 p-0"><i class="bi bi-clock text-secondary me-2"></i>Horário: 20:00</p>
-                        <p class="p-0"><i class="bi bi-calendar3 text-secondary me-2"></i>Data: 06/08/2023</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <img class="img-fluid" src="./assets/gerais/aviaoes-do-forro.jpg" alt="Banda Aviões do Forró">
-                    <div class="card-header">
-                        <h5 class="text-center">Aviões do Forró</h5>
-                        <p class="m-0 p-0"><i class="bi bi-geo-alt-fill text-secondary me-2"></i>Local: Palco oficial da SEMUR</p>
-                        <p class="m-0 p-0"><i class="bi bi-clock text-secondary me-2"></i>Horário: 23:00</p>
-                        <p class="p-0"><i class="bi bi-calendar3 text-secondary me-2"></i>Data: 06/08/2023</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="container row mx-auto g-4" id="containerAtracaoCard"></div>
+                 
         <h5 class="container mt-5 mb-2">Agenda oficial</h5>
         <p class="container mb-4">Desbravando a cidade: eventos e inaugurações trazidos Secretaria de Cultura, Turismo e
             Esporte (SECULTE) em parceria com as demais secretarias municipais, celebrando cultura, turismo e esporte!
         </p>
 
-        <div class="container row mx-auto g-4">
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <img class="img-fluid" src="./assets/gerais/capoeira.png" alt="Aulão de Capoeira">
-                    <div class="card-header">
-                        <h5 class="text-center">Aulão básico de capoeira</h5>
-                        <p class="m-0 p-0"><i class="bi bi-geo-alt-fill text-secondary me-2"></i>Local: Praça Matriz</p>
-                        <p class="m-0 p-0"><i class="bi bi-clock text-secondary me-2"></i>Horário: 18:30</p>
-                        <p class="p-0"><i class="bi bi-calendar3 text-secondary me-2"></i>Data: 31/07/2023</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <img class="img-fluid" src="./assets/gerais/tablet.png" alt="Entrega de Tablets">
-                    <div class="card-header">
-                        <h5 class="text-center">Entrega de Tablets</h5>
-                        <p class="m-0 p-0"><i class="bi bi-geo-alt-fill text-secondary me-2"></i>Local: Escola José Raimundo De Deus</p>
-                        <p class="m-0 p-0"><i class="bi bi-clock text-secondary me-2"></i>Horário: 08:30</p>
-                        <p class="p-0"><i class="bi bi-calendar3 text-secondary me-2"></i>Data: 01/08/2023</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <img class="img-fluid" src="./assets/gerais/saque.png" alt="Banco 24 horas">
-                    <div class="card-header">
-                        <h5 class="text-center">Inauguração BB 24hrs</h5>
-                        <p class="m-0 p-0"><i class="bi bi-geo-alt-fill text-secondary me-2"></i>Local: Praça Matriz</p>
-                        <p class="m-0 p-0"><i class="bi bi-clock text-secondary me-2"></i>Horário: 10:00</p>
-                        <p class="p-0"><i class="bi bi-calendar3 text-secondary me-2"></i>Data: 02/08/2023</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <img class="img-fluid" src="./assets/gerais/museu.png" alt="Entrega de relíqueas">
-                    <div class="card-header">
-                        <h5 class="text-center">Entrega de relíqueas</h5>
-                        <p class="m-0 p-0"><i class="bi bi-geo-alt-fill text-secondary me-2"></i>Local: Museu Histórico Padre Pedro</p>
-                        <p class="m-0 p-0"><i class="bi bi-clock text-secondary me-2"></i>Horário: 13:30</p>
-                        <p class="p-0"><i class="bi bi-calendar3 text-secondary me-2"></i>Data: 03/08/2023</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <img class="img-fluid" src="./assets/gerais/cavalos.png" alt="Eguas Russas Brancas">
-                    <div class="card-header">
-                        <h5 class="text-center">Instalação das Russas da Paz</h5>
-                        <p class="m-0 p-0"><i class="bi bi-geo-alt-fill text-secondary me-2"></i>Local: Universidade Federal do Ceará</p>
-                        <p class="m-0 p-0"><i class="bi bi-clock text-secondary me-2"></i>Horário: 08:00</p>
-                        <p class="p-0"><i class="bi bi-calendar3 text-secondary me-2"></i>Data: 04/08/2023</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <img class="img-fluid" src="./assets/gerais/forum.png" alt="Bloco de Medicina na UFC Russas">
-                    <div class="card-header">
-                        <h5 class="text-center">Inauguração do bloco de Saúde</h5>
-                        <p class="m-0 p-0"><i class="bi bi-geo-alt-fill text-secondary me-2"></i>Local: Universidade Federal do Ceará</p>
-                        <p class="m-0 p-0"><i class="bi bi-clock text-secondary me-2"></i>Horário: 10:30</p>
-                        <p class="p-0"><i class="bi bi-calendar3 text-secondary me-2"></i>Data: 04/08/2023</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="container row mx-auto g-4" id="containerCard"> </div>
     </div>
 
     <section class="pb-4 bg-primary mt-5 p-2">
@@ -256,17 +123,17 @@
         <div class="d-flex flex-column flex-lg-row align-items-center gap-3 px-3">
 
             <div class="d-flex align-items-center justify-content-center">
-                <img class="tam_image_final" src="./assets/oferecimento/brasao-russas.png"
+                <img class="tam_image_final" src="./src/assets/oferecimento/brasao-russas.png"
                     alt="Imagem de brasão da cidade de Russas escrito Prefeitura de Russas do lado">
             </div>
 
             <div class="d-flex align-items-center justify-content-center">
-                <img class="tam_image_final" src="./assets/oferecimento/secult.png"
+                <img class="tam_image_final" src="./src/assets/oferecimento/secult.png"
                     alt="Imagem da logo da Secult com a escrita Secult">
             </div>
 
             <div class="d-flex align-items-center justify-content-center">
-                <img class="tam_image_final" src="./assets/oferecimento/government-ceara.png"
+                <img class="tam_image_final" src="./src/assets/oferecimento/government-ceara.png"
                     alt="Logo do governo do ceará. Escrito Governo do Ceará Secretaria de Cultura">
             </div>
         </div>
@@ -329,6 +196,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="src/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 </body>
 
 </html>

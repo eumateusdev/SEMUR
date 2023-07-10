@@ -4,18 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./src/assets/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/styles/metro/notify-metro.css">
     <title>Gerenciamento SEMUR - 2023</title>
 </head>
 
 <nav class="navbar fixed-top shadow navbar-expand-lg bg-primary navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="#" name="INICIO">
-            <h1 class="m-0"><img class="d-block" src="./assets/logo.png" alt="Logo SEMUR 2023"></h1>
+            <h1 class="m-0"><img class="d-block" src="./src/assets/logo.png" alt="Logo SEMUR 2023"></h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,18 +61,18 @@
                             placeholder="Nomeie a atração aqui">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Local da atração:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                        <label for="exampleFormControlInput2" class="form-label">Local da atração:</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput2"
                             placeholder="Local onde ocorrerá a atração">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Horário da atração:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                        <label for="exampleFormControlInput3" class="form-label">Horário da atração:</label>
+                        <input maxlength="5" type="text" class="form-control" id="exampleFormControlInput3"
                             placeholder="Horário da atração">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Data da atração:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                        <label for="exampleFormControlInput4" class="form-label">Data da atração:</label>
+                        <input maxlength="10" type="text" class="form-control" id="exampleFormControlInput4"
                             placeholder="Data da atração">
                     </div>
                     <div class="mb-3">
@@ -80,7 +83,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Salvar</button>
+                    <button id="createAttraction" type="button" class="btn btn-primary">Salvar</button>
                 </div>
             </div>
         </div>
@@ -98,34 +101,34 @@
                 <div class="modal-body">
 
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Nome do evento:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                        <label for="InputEvent1" class="form-label">Nome do evento:</label>
+                        <input type="text" class="form-control" id="InputEvent1"
                             placeholder="Nomeie a atração aqui">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Local do evento:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                        <label for="InputEvent2" class="form-label">Local do evento:</label>
+                        <input type="text" class="form-control" id="InputEvent2"
                             placeholder="Local onde ocorrerá a atração">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Horário do evento:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                        <label for="InputEvent3" class="form-label">Horário do evento:</label>
+                        <input maxlength="5" type="text" class="form-control" id="InputEvent3"
                             placeholder="Horário da atração">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Data do evento:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                        <label for="InputEvent4" class="form-label">Data do evento:</label>
+                        <input maxlength="10" type="text" class="form-control" id="InputEvent4"
                             placeholder="Data da atração">
                     </div>
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Imagem (720x405 px)</label>
-                        <input class="form-control" type="file" id="formFile">
+                        <label for="InputEventFile" class="form-label">Imagem (720x405 px)</label>
+                        <input class="form-control" type="file" id="InputEventFile">
                     </div>
 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Salvar</button>
+                    <button id="createEvent" type="button" class="btn btn-primary">Salvar</button>
                 </div>
             </div>
         </div>
@@ -143,7 +146,7 @@
                         <div class="col-sm-4">
                             <div class="search-box">
                                 <i class="bi bi-search pb-1"></i>
-                                <input type="text" class="form-control" placeholder="Buscar">
+                                <input type="text" class="form-control" id="searchAttraction" placeholder="Buscar">
                             </div>
                         </div>
                     </div>
@@ -159,101 +162,9 @@
                             <th>Ferramentas</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Thalia Santos</td>
-                            <td>Palco oficial da SEMUR</td>
-                            <td>21:00</td>
-                            <td>30/07/2023</td>
-                            <td>
-                                <a href="#" class="view" data-bs-toggle="modal" data-bs-target="#visualizarAtracao" title="Visualizar" data-toggle="tooltip"><i
-                                        class="bi bi-eye-fill"></i></a>
-                                <a href="#" class="edit" data-bs-toggle="modal" data-bs-target="#editarAtracao" title="Editar" data-toggle="tooltip"><i
-                                        class="bi bi-pencil-fill"></i></a>
-                                <a href="#" class="delete" data-bs-toggle="modal" data-bs-target="#excluirAtracao" title="Deletar" data-toggle="tooltip"><i
-                                        class="bi bi-trash3-fill"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Sthephania Gomes</td>
-                            <td>Palco oficial da SEMUR</td>
-                            <td>23:00</td>
-                            <td>30/07/2023</td>
-                            <td>
-                                <a href="#" class="view" data-bs-toggle="modal" data-bs-target="#visualizarAtracao" title="Visualizar" data-toggle="tooltip"><i
-                                        class="bi bi-eye-fill"></i></a>
-                                <a href="#" class="edit" data-bs-toggle="modal" data-bs-target="#editarAtracao" title="Editar" data-toggle="tooltip"><i
-                                        class="bi bi-pencil-fill"></i></a>
-                                <a href="#" class="delete" data-bs-toggle="modal" data-bs-target="#excluirAtracao" title="Deletar" data-toggle="tooltip"><i
-                                        class="bi bi-trash3-fill"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Pastor Matheus Aguiar</td>
-                            <td>Palco oficial da SEMUR</td>
-                            <td>20:00</td>
-                            <td>05/08/2023</td>
-                            <td>
-                                <a href="#" class="view" data-bs-toggle="modal" data-bs-target="#visualizarAtracao" title="Visualizar" data-toggle="tooltip"><i
-                                        class="bi bi-eye-fill"></i></a>
-                                <a href="#" class="edit" data-bs-toggle="modal" data-bs-target="#editarAtracao" title="Editar" data-toggle="tooltip"><i
-                                        class="bi bi-pencil-fill"></i></a>
-                                <a href="#" class="delete" data-bs-toggle="modal" data-bs-target="#excluirAtracao" title="Deletar" data-toggle="tooltip"><i
-                                        class="bi bi-trash3-fill"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Calcinha Preta</td>
-                            <td>Palco oficial da SEMUR</td>
-                            <td>23:00</td>
-                            <td>05/08/2023</td>
-                            <td>
-                                <a href="#" class="view" data-bs-toggle="modal" data-bs-target="#visualizarAtracao" title="Visualizar" data-toggle="tooltip"><i
-                                        class="bi bi-eye-fill"></i></a>
-                                <a href="#" class="edit" data-bs-toggle="modal" data-bs-target="#editarAtracao" title="Editar" data-toggle="tooltip"><i
-                                        class="bi bi-pencil-fill"></i></a>
-                                <a href="#" class="delete" data-bs-toggle="modal" data-bs-target="#excluirAtracao" title="Deletar" data-toggle="tooltip"><i
-                                        class="bi bi-trash3-fill"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Celebradora Alana Gomes</td>
-                            <td>Palco oficial da SEMUR</td>
-                            <td>20:00</td>
-                            <td>06/08/2023</td>
-                            <td>
-                                <a href="#" class="view" data-bs-toggle="modal" data-bs-target="#visualizarAtracao" title="Visualizar" data-toggle="tooltip"><i
-                                        class="bi bi-eye-fill"></i></a>
-                                <a href="#" class="edit" data-bs-toggle="modal" data-bs-target="#editarAtracao" title="Editar" data-toggle="tooltip"><i
-                                        class="bi bi-pencil-fill"></i></a>
-                                <a href="#" class="delete" data-bs-toggle="modal" data-bs-target="#excluirAtracao" title="Deletar" data-toggle="tooltip"><i
-                                        class="bi bi-trash3-fill"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Aviões do Forró</td>
-                            <td>Palco oficial da SEMUR</td>
-                            <td>23:00</td>
-                            <td>06/08/2023</td>
-                            <td>
-                                <a href="#" class="view" data-bs-toggle="modal" data-bs-target="#visualizarAtracao" title="Visualizar" data-toggle="tooltip"><i
-                                        class="bi bi-eye-fill"></i></a>
-                                <a href="#" class="edit" data-bs-toggle="modal" data-bs-target="#editarAtracao" title="Editar" data-toggle="tooltip"><i
-                                        class="bi bi-pencil-fill"></i></a>
-                                <a href="#" class="delete" data-bs-toggle="modal" data-bs-target="#excluirAtracao" title="Deletar" data-toggle="tooltip"><i
-                                        class="bi bi-trash3-fill"></i></a>
-                            </td>
-                        </tr>
-                    </tbody>
+                    <tbody id="tableAttractions"> </tbody>
                 </table>
                 <div class="clearfix">
-                    <div class="hint-text">Mostrando <b>6</b> de <b>6</b> resultados.</div>
                     <ul class="pagination">
                         <li class="page-item disabled"><a href="#"><i class="bi bi-chevron-double-left"></i></a></li>
                         <li class="page-item active"><a href="#" class="page-link">1</a></li>
@@ -278,35 +189,29 @@
                 <div class="modal-body">
 
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Nome da atração:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
-                            placeholder="Nomeie a atração aqui">
+                        <label for="ViewAttractionInput1" class="form-label">Nome da atração:</label>
+                        <input type="text" class="form-control" id="ViewAttractionInput1"
+                            placeholder="Nomeie a atração aqui" disabled>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Local da atração:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
-                            placeholder="Local onde ocorrerá a atração">
+                        <label for="ViewAttractionInput2" class="form-label">Local da atração:</label>
+                        <input type="text" class="form-control" id="ViewAttractionInput2"
+                            placeholder="Local onde ocorrerá a atração" disabled>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Horário da atração:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
-                            placeholder="Horário da atração">
+                        <label for="ViewAttractionInput3" class="form-label">Horário da atração:</label>
+                        <input type="text" class="form-control" id="ViewAttractionInput3"
+                            placeholder="Horário da atração" disabled>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Data da atração:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
-                            placeholder="Data da atração">
+                        <label for="ViewAttractionInput4" class="form-label">Data da atração:</label>
+                        <input type="text" class="form-control" id="ViewAttractionInput4"
+                            placeholder="Data da atração" disabled>
                     </div>
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Imagem (Tamanho obrigatório de 720x405px)</label>
-                        <input class="form-control" type="file" id="formFile">
+                        <img style="width: 100%;height: 100%;" id="ViewAttractionFile" src="./src/assets/gerais/aviaoes-do-forro.jpg" alt="">
                     </div>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Salvar</button>
-                </div>
+                </div>                
             </div>
         </div>
     </div>
@@ -323,34 +228,34 @@
                 <div class="modal-body">
 
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Nome da atração:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                        <label for="editAttractionInput1" class="form-label">Nome da atração:</label>
+                        <input type="text" class="form-control" id="editAttractionInput1"
                             placeholder="Nomeie a atração aqui">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Local da atração:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                        <label for="editAttractionInput2" class="form-label">Local da atração:</label>
+                        <input type="text" class="form-control" id="editAttractionInput2"
                             placeholder="Local onde ocorrerá a atração">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Horário da atração:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                        <label for="editAttractionInput3" class="form-label">Horário da atração:</label>
+                        <input maxlength="5" type="text" class="form-control" id="editAttractionInput3"
                             placeholder="Horário da atração">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Data da atração:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                        <label for="editAttractionInput4" class="form-label">Data da atração:</label>
+                        <input maxlength="10" type="text" class="form-control" id="editAttractionInput4"
                             placeholder="Data da atração">
                     </div>
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Imagem (Tamanho obrigatório de 720x405px)</label>
-                        <input class="form-control" type="file" id="formFile">
+                        <label for="editAttractionFile" class="form-label">Imagem (Tamanho obrigatório de 720x405px)</label>
+                        <input class="form-control" type="file" id="editAttractionFile">
                     </div>
 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Salvar</button>
+                    <button type="button" class="btn btn-primary editAttractionOrEvent">Salvar</button>
                 </div>
             </div>
         </div>
@@ -370,7 +275,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-danger">Sim</button>
+                    <button type="button" class="btn btn-danger removeAttractionOrEvent">Sim</button>
                 </div>
             </div>
         </div>
@@ -388,12 +293,12 @@
                         <div class="col-sm-4">
                             <div class="search-box">
                                 <i class="bi bi-search pb-1"></i>
-                                <input type="text" class="form-control" placeholder="Buscar">
+                                <input type="text" class="form-control" id="searchEvent" placeholder="Buscar">
                             </div>
                         </div>
                     </div>
                 </div>
-                <table class="table table-striped table-hover table-bordered">
+                <table class="table table-striped table-hover table-bordered" >
                     <thead>
                         <tr>
                             <th>#</th>
@@ -404,102 +309,9 @@
                             <th>Ferramentas</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Aulão básico de capoeira</td>
-                            <td>Praça Matriz</td>
-                            <td>18:30</td>
-                            <td>31/07/2023</td>
-                            <td>
-                                <a href="#" class="view" data-bs-toggle="modal" data-bs-target="#visualizarEvento" title="Visualizar" data-toggle="tooltip"><i
-                                        class="bi bi-eye-fill" data-target="visualizarModal"></i></a>
-
-                                <a href="#" class="edit" data-bs-toggle="modal" data-bs-target="#editarEvento" title="Editar" data-toggle="tooltip"><i
-                                        class="bi bi-pencil-fill"></i></a>
-                                <a href="#" class="delete" data-bs-toggle="modal" data-bs-target="#excluirEvento" title="Deletar" data-toggle="tooltip"><i
-                                        class="bi bi-trash3-fill"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Entrega de Tablets</td>
-                            <td>Escola José Raimundo de Deus</td>
-                            <td>08:30</td>
-                            <td>01/08/2023</td>
-                            <td>
-                                <a href="#" class="view" data-bs-toggle="modal" data-bs-target="#visualizarEvento" title="Visualizar" data-toggle="tooltip"><i
-                                        class="bi bi-eye-fill"></i></a>
-                                <a href="#" class="edit" data-bs-toggle="modal" data-bs-target="#editarEvento" title="Editar" data-toggle="tooltip"><i
-                                        class="bi bi-pencil-fill"></i></a>
-                                <a href="#" class="delete" data-bs-toggle="modal" data-bs-target="#excluirEvento" title="Deletar" data-toggle="tooltip"><i
-                                        class="bi bi-trash3-fill"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Inauguração BB 24hrs</td>
-                            <td>Praça Matriz</td>
-                            <td>10:00</td>
-                            <td>02/08/2023</td>
-                            <td>
-                                <a href="#" class="view" data-bs-toggle="modal" data-bs-target="#visualizarEvento" title="Visualizar" data-toggle="tooltip"><i
-                                        class="bi bi-eye-fill"></i></a>
-                                <a href="#" class="edit" data-bs-toggle="modal" data-bs-target="#editarEvento" title="Editar" data-toggle="tooltip"><i
-                                        class="bi bi-pencil-fill"></i></a>
-                                <a href="#" class="delete" data-bs-toggle="modal" data-bs-target="#excluirEvento" title="Deletar" data-toggle="tooltip"><i
-                                        class="bi bi-trash3-fill"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Entrega de relíqueas</td>
-                            <td>Museu Histórico Padre Pedro</td>
-                            <td>13:30</td>
-                            <td>03/08/2023</td>
-                            <td>
-                                <a href="#" class="view" data-bs-toggle="modal" data-bs-target="#visualizarEvento" title="Visualizar" data-toggle="tooltip"><i
-                                        class="bi bi-eye-fill"></i></a>
-                                <a href="#" class="edit" data-bs-toggle="modal" data-bs-target="#editarEvento" title="Editar" data-toggle="tooltip"><i
-                                        class="bi bi-pencil-fill"></i></a>
-                                <a href="#" class="delete" data-bs-toggle="modal" data-bs-target="#excluirEvento" title="Deletar" data-toggle="tooltip"><i
-                                        class="bi bi-trash3-fill"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Instalação das Russas da Paz</td>
-                            <td>Universidade Federal do Ceará</td>
-                            <td>08:00</td>
-                            <td>04/08/2023</td>
-                            <td>
-                                <a href="#" class="view" data-bs-toggle="modal" data-bs-target="#visualizarEvento" title="Visualizar" data-toggle="tooltip"><i
-                                        class="bi bi-eye-fill"></i></a>
-                                <a href="#" class="edit" data-bs-toggle="modal" data-bs-target="#editarEvento" title="Editar" data-toggle="tooltip"><i
-                                        class="bi bi-pencil-fill"></i></a>
-                                <a href="#" class="delete" data-bs-toggle="modal" data-bs-target="#excluirEvento" title="Deletar" data-toggle="tooltip"><i
-                                        class="bi bi-trash3-fill"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Inauguração do bloco de Saúde</td>
-                            <td>Universidade Federal do Ceará</td>
-                            <td>10:30</td>
-                            <td>04/08/2023</td>
-                            <td>
-                                <a href="#" class="view" data-bs-toggle="modal" data-bs-target="#visualizarEvento" title="Visualizar" data-toggle="tooltip"><i
-                                        class="bi bi-eye-fill"></i></a>
-                                <a href="#" class="edit" data-bs-toggle="modal" data-bs-target="#editarEvento" title="Editar" data-toggle="tooltip"><i
-                                        class="bi bi-pencil-fill"></i></a>
-                                <a href="#" class="delete" data-bs-toggle="modal" data-bs-target="#excluirEvento" title="Deletar" data-toggle="tooltip"><i
-                                        class="bi bi-trash3-fill"></i></a>
-                            </td>
-                        </tr>
-                    </tbody>
+                    <tbody id="tableEvents"> </tbody>
                 </table>
                 <div class="clearfix">
-                    <div class="hint-text">Mostrando <b>6</b> de <b>6</b> resultados.</div>
                     <ul class="pagination">
                         <li class="page-item disabled"><a href="#"><i class="bi bi-chevron-double-left"></i></a></li>
                         <li class="page-item active"><a href="#" class="page-link">1</a></li>
@@ -526,26 +338,26 @@
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Nome do evento:</label>
                         <input type="text" class="form-control" id="exampleFormControlInput1"
-                            placeholder="Nome do evento">
+                            placeholder="Nome do evento" disabled>
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Local do evento:</label>
                         <input type="text" class="form-control" id="exampleFormControlInput1"
-                            placeholder="Local onde ocorrerá o evento">
+                            placeholder="Local onde ocorrerá o evento" disabled> 
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Horário do evento:</label>
                         <input type="text" class="form-control" id="exampleFormControlInput1"
-                            placeholder="Horário do evento">
+                            placeholder="Horário do evento" disabled>
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Data do evento:</label>
                         <input type="text" class="form-control" id="exampleFormControlInput1"
-                            placeholder="Data do evento">
+                            placeholder="Data do evento" disabled>
                     </div>
                     <div class="mb-3">
                         <label for="formFile" class="form-label">Imagem (Tamanho obrigatório de 720x405px)</label>
-                        <input class="form-control" type="file" id="formFile">
+                        <input class="form-control" type="file" id="formFile" disabled>
                     </div>
 
                 </div>
@@ -569,34 +381,34 @@
                 <div class="modal-body">
 
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Nome do eventoo:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                        <label for="editAttractionInput1" class="form-label">Nome do eventoo:</label>
+                        <input type="text" class="form-control" id="editAttractionInput1"
                             placeholder="Nome do evento">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Local do evento:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                        <label for="editAttractionInput2" class="form-label">Local do evento:</label>
+                        <input type="text" class="form-control" id="editAttractionInput2"
                             placeholder="Local do evento">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Horário do evento:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                        <label for="editAttractionInput3" class="form-label">Horário do evento:</label>
+                        <input maxlength="5" type="text" class="form-control" id="editAttractionInput3"
                             placeholder="Horário do evento">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Data do evento:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                        <label for="editAttractionInput4" class="form-label">Data do evento:</label>
+                        <input maxlength="10" type="text" class="form-control" id="editAttractionInput4"
                             placeholder="Data do evento">
                     </div>
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Imagem (Tamanho obrigatório de 720x405px)</label>
-                        <input class="form-control" type="file" id="formFile">
+                        <label for="editAttractionFile" class="form-label">Imagem (Tamanho obrigatório de 720x405px)</label>
+                        <input class="form-control" type="file" id="editAttractionFile">
                     </div>
 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Salvar</button>
+                    <button type="button" class="btn btn-primary editAttractionOrEvent">Salvar</button>
                 </div>
             </div>
         </div>
@@ -616,7 +428,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-danger">Sim</button>
+                    <button type="button" class="btn btn-danger removeAttractionOrEvent">Sim</button>
                 </div>
             </div>
         </div>
@@ -633,6 +445,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.js"></script>
+    <script type="module" src="./src/js/gerenciamento.js"></script>
 </body>
 
 </html>
